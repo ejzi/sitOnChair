@@ -1,6 +1,6 @@
 * {
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     box-sizing: border-box;
 }
 
@@ -55,31 +55,43 @@
     font-weight: normal;
     font-style: normal;
 }
+
 header, section, footer {
     width: 100%;
+    position: center;
 }
+
 .main-width {
     width: 1200px;
     margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
 }
+
 header {
     height: 50px;
     background-color: black;
     color: white;
     font-family: "Raleway-Bold";
 }
-.main-width p, .main-width ul li {
+
+header a {
+    text-decoration: none;
+    color: white;
+}
+
+.main-width p, .main-width ul li /*to był duży duży błąd, który spieprzył mi całą strone!!!aaaaaaaaaaaa!!!*/
+{
     display: inline;
     line-height: 50px;
 }
-span{
+
+span.logo {
     color: #2bcaae;
 }
+
 .main-width ul {
     float: right;
 }
+
 .main-width ul li {
     padding: 20px;
 }
@@ -88,6 +100,17 @@ span{
     position: relative;
     display: inline-block;
 }
+
+/*.arrow {
+    width: 0;
+    height: 0;
+    position: relative;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+    border-bottom: 10px solid black;
+    top: 20px;
+    right: -50px;
+}*/
 
 .dropdown-content {
     display: none;
@@ -98,11 +121,12 @@ span{
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
 .section-one {
-    height: 565px;
     font-family: 'Raleway-Light';
     background: linear-gradient(white, #d1d0d8);
 }
+
 .black-chair {
     width: 700px;
     height: 500px;
@@ -110,25 +134,29 @@ span{
     float: left;
     margin: 30px -50px;
 }
+
 .slider-text {
     width: 400px;
     height: 400px;
-    margin: 150px auto;
+    margin: 150px auto 0;
     display: inline-block;
     float: left;
 }
+
 .slider-text p {
     display: block;
     text-align: center;
     line-height: 20px;
     margin: 10px auto;
 }
+
 p.first {
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 40px;
 }
-.button {
+
+.slider-text .button {
     display: block;
     width: 200px;
     height: 50px;
@@ -140,6 +168,12 @@ p.first {
     padding: 15px;
     margin: 30px 100px;
 }
+
+.button a {
+    text-decoration: none;
+    color: white;
+}
+
 .arrow-left {
     display: inline-block;
     width: 50px;
@@ -147,10 +181,421 @@ p.first {
     float: left;
     margin-top: 250px;
 }
-.arrow-right{
+
+.arrow-right {
     display: inline-block;
     width: 50px;
     height: 50px;
     float: right;
     margin-top: 250px;
+}
+
+.section-one:after {
+    content: " ";
+    clear: both;
+    display: block;
+}
+
+/*SEKCJA DRUGA*/
+.section-two {
+    font-family: 'Raleway-Light';
+}
+
+.image-box {
+    width: 380px;
+    height: 250px;
+    border: 1px solid #d1d0d8;
+    float: left;
+    margin: 20px 10px;
+    background-position: center;
+    background-size: cover;
+}
+
+.one {
+    background-image: url("../images/box1_img.jpg");
+}
+
+.two {
+    background-image: url("../images/box2_img.jpg");
+}
+
+.image-descript {
+    height: 60px;
+    margin: 170px 0 0 0;
+    font-weight: bold;
+    padding-left: 10px;
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.image-descript p::after {
+    content: " ";
+    display: block;
+    width: 160px;
+    height: 8px;
+    background-color: #2bcaae;
+    margin-top: -15px;
+}
+
+.text-box {
+    width: 380px;
+    height: 290px;
+    border: 1px solid #d1d0d8;
+    float: right;
+    padding: 20px;
+    margin: 20px 10px;
+}
+
+.text-box p {
+    display: block;
+    line-height: 30px;
+    margin-top: 10px;
+    color: #878787;
+}
+
+.text-box h2::after {
+    content: "";
+    display: block;
+    width: 180px;
+    height: 8px;
+    background-color: #2bcaae;
+}
+
+.section-two::after {
+    content: " ";
+    clear: both;
+    display: block;
+}
+
+/*SEKCJA TRZECIA CENNIK*/
+.section-three {
+    background-color: #e2e1e9;
+    font-family: 'Raleway-Regular';
+}
+
+.section-box {
+    padding-top: 40px;
+    padding-bottom: 100px;
+}
+
+.price-box span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #797880;
+}
+
+.price-box span::after {
+    content: " ";
+    display: block;
+    width: 250px;
+    height: 8px;
+    background-color: #2bcaae;
+    margin-top: 5px;
+    margin-bottom: 80px;
+}
+
+.left-box, .right-box {
+    display: inline-block;
+    width: 31.5%;
+    height: 550px;
+    border: 2px solid #d1d0d8;
+    position: relative;
+    background-color: #ededed;
+}
+
+.left-box .outer-circle, .right-box .outer-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: 180px;
+    transform: translate(-50%, -50%);
+    background-color: #ededed;
+    border: 2px solid #d1d0d8;
+}
+
+.left-box .inner-circle, .right-box .inner-circle {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 23px;
+    left: 23px;
+    border-radius: 50%;
+    background-color: #d1d0d8;
+}
+
+.left-box p, .left-box.price-circle, .left-box.button {
+    display: block;
+}
+
+.left-box h2, .right-box h2 {
+    display: block;
+    color: #2bcaae;
+    text-align: center;
+    margin: 20px;
+}
+
+.price-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #d1d0d8;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #f3f3f3;
+    padding: 20px;
+}
+
+.innerParOne {
+    font-size: 40px;
+    font-weight: bold;
+    color: #a2a1a8;
+}
+
+.innerParOne .price {
+    font-size: 20px;
+    vertical-align: super;
+}
+
+.innerParTwo {
+    color: #a2a1a8;
+}
+
+.white-line {
+    height: 5px;
+    background-color: #f5f5f5;
+}
+
+.section-three .left-box .p1, .section-three .right-box .p1, .right-box .p3 {
+    display: block;
+    background-color: #d1d0d8;
+    text-align: center;
+    font-size: 25px;
+    color: #a3a2aa;
+}
+
+.section-three .left-box .p2, .section-three .right-box .p2, .right-box .p4, .middle-box .p2 {
+    display: block;
+    background-color: #dfdee6;
+    text-align: center;
+    font-size: 25px;
+    color: #78777f;
+}
+
+.left-box .button, .right-box .button {
+    display: block;
+    height: 35px;
+    width: 120px;
+    border-radius: 10px;
+    background-color: #2bcaae;
+    text-align: center;
+    color: white;
+    padding: 8px;
+}
+
+.left-box .button {
+    margin-top: 150px;
+}
+
+.right-box .button {
+    margin-top: 51px;
+}
+
+.middle-box {
+    display: inline-block;
+    width: 31.5%;
+    height: 550px;
+    border: 2px solid #2bcaae;
+    margin-left: 25px;
+    margin-right: 25px;
+    position: relative;
+    background-color: #2bcaae;
+}
+
+.middle-box .outer-circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    top: -10px;
+    left: 180px;
+    transform: translate(-50%, -50%);
+    background-color: #2bcaae;
+    border: 2px solid #2bcaae;
+}
+
+.middle-box .inner-circle {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 23px;
+    left: 23px;
+    border-radius: 50%;
+    background-color: #ededed;
+}
+
+.middle-box h2 {
+    text-align: center;
+    color: white;
+    margin: 20px auto;
+}
+
+.middle-box .p1, .middle-box .p3 {
+    display: block;
+    background-color: #f3f3f3;
+    text-align: center;
+    font-size: 25px;
+    color: #aaaaaa;
+}
+
+.middle-box .button {
+    display: block;
+    height: 35px;
+    width: 120px;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+    text-align: center;
+    color: #2bcaae;
+    padding: 8px;
+    margin-top: 105px;
+}
+
+.middle-box .innerParOne {
+    font-size: 40px;
+    font-weight: bold;
+    color: #2bcaae;
+}
+
+.middle-box .innerParOne .price {
+    font-size: 20px;
+    vertical-align: super;
+}
+
+.middle-box .innerParTwo {
+    color: #2bcaae;
+}
+
+.section-three::after {
+    content: " ";
+    clear: both;
+    display: block;
+}
+
+/*SEKCJA CZWARTA FORMULARZ*/
+.form-section {
+    font-family: 'Raleway-Regular';
+}
+
+.form-box {
+    padding-top: 40px;
+    margin-bottom: 50px;
+}
+
+.form-box span {
+    font-size: 20px;
+    font-weight: bold;
+    color: #797880;
+}
+
+.form-box span::after {
+    content: " ";
+    display: block;
+    width: 250px;
+    height: 8px;
+    background-color: #2bcaae;
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+.boxOne, .boxTwo {
+    display: inline;
+    float: left;
+}
+
+.formOne {
+    margin-right: 70px;
+}
+
+.formOne label {
+    display: block;
+    margin: 10px auto;
+}
+
+.nameBox, .emailBox {
+    width: 700px;
+    height: 60px;
+    border: 1px solid #2bcaae;
+    font-size: 30px;
+    font-family: 'Raleway-Light';
+}
+
+.messageBox {
+    width: 700px;
+    height: 200px;
+    font-size: 30px;
+    font-family: 'Raleway-Light';
+}
+
+.redChair {
+    width: 250px;
+    height: 200px;
+}
+
+.checkbox {
+    width: 300px;
+    height: 50px;
+    color: #a2a1a8;
+    margin: 20px;
+    font-size: 20px;
+}
+
+.sendButton {
+    display: block;
+    height: 60px;
+    width: 350px;
+    border-radius: 10px;
+    background-color: #2bcaae;
+    text-align: center;
+    color: white;
+    padding: 15px;
+    margin: 20px auto;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.form-section::after {
+    content: " ";
+    clear: both;
+    display: block;
+}
+
+/*
+FOOTER*/
+.footerBox {
+    margin: 80px 0 20px 0;
+}
+
+.footerP, .media, footerLogo {
+    display: inline;
+}
+
+.footerP {
+    color: #a2a1a8;
+    margin-right: 350px;
+    font-size: 20px;
+}
+
+.media {
+    margin-right: 80px;
+}
+
+.footerLogo {
+    color: #a2a1a8;
+    font-size: 20px;
+}
+
+.on {
+    font-weight: bold;
 }
