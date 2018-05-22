@@ -78,7 +78,7 @@ header a {
     color: white;
 }
 
-.main-width p, .main-width ul li /*to był duży duży błąd, który spieprzył mi całą strone!!!aaaaaaaaaaaa!!!*/
+.main-width p, .main-width ul li /*!aaaaaaaaaaaa!!! nigdy więcej!!!!!!*/
 {
     display: inline;
     line-height: 50px;
